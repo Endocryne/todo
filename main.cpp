@@ -85,7 +85,7 @@ void main_loop(map<string, bool> &todo){
 		}
 
 		printList(todo);
-		cout << "\033[47m   \033[0m\033[37m \033[0m";
+		cout << "\033[47m  \033[1m\033[38m  \033[0m\033[37m \033[0m";
 		getline(cin, userInput);
 
 		if (userInput == ":wq") {
@@ -112,9 +112,10 @@ int main() {
 
 	ifstream input_file;
 	string fileName;
-	cout << "Enter todo-filename: " << endl;
-	cin >> fileName;
-	fileName = fileName + ".txt";
+	//cout << "Enter todo-filename: " << endl;
+	//cin >> fileName;
+	fileName = "/home/eugene/.todo.txt";
+	//fileName = fileName + ".txt";
 	input_file.open(fileName);
 	if (input_file)
 	{
